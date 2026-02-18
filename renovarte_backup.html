@@ -1,0 +1,2361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Renovarte Lorena | Aesthetic & Wellness Med Spa</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/jpeg" href="https://storage.googleapis.com/msgsndr/eviVBMfZpB3V1luclRUG/media/6973b067b301796befb9b28a.jpeg">
+    <link rel="apple-touch-icon" href="https://storage.googleapis.com/msgsndr/eviVBMfZpB3V1luclRUG/media/6973b067b301796befb9b28a.jpeg">
+
+    <!-- Icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.css" rel="stylesheet">
+
+    <style>
+:root {
+    --primary-color: #00b5b5;
+    --secondary-color: #ffffff;
+    --accent-color: #d4a055;
+    --text-color: #000000;
+    --light-text: #222222;
+    --contrast-bg: #111111;
+    --font-heading: 'Playfair Display', serif;
+    --font-body: 'Inter', sans-serif;
+    --border-radius: 24px;
+    --spacing-unit: 1rem;
+    --glow-color: rgba(0, 181, 181, 0.4);
+}
+
+@keyframes gradientShift {
+    0%, 100% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(5deg); }
+}
+
+@keyframes pulse-glow {
+    0%, 100% { box-shadow: 0 0 20px var(--glow-color), 0 0 40px transparent; }
+    50% { box-shadow: 0 0 30px var(--glow-color), 0 0 60px var(--glow-color); }
+}
+
+@keyframes shimmer {
+    0% { background-position: -200% 0; }
+    100% { background-position: 200% 0; }
+}
+
+@keyframes starPulse {
+    0%, 100% { transform: scale(1); opacity: 1; }
+    50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+@keyframes heroGradientMove {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+/* Cursor Glow Effect */
+.cursor-glow {
+    position: fixed;
+    width: 350px;
+    height: 350px;
+    background: radial-gradient(circle, rgba(0, 181, 181, 0.2), rgba(212, 160, 85, 0.1) 40%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+    z-index: 9998;
+    transform: translate(-50%, -50%);
+    transition: opacity 0.3s ease;
+    opacity: 0;
+}
+
+body:hover .cursor-glow {
+    opacity: 1;
+}
+
+/* Animated Hero Background */
+.hero {
+    background: linear-gradient(-45deg, #ffffff, #f0fafa, #faf5eb, #f5fffe, #ffffff);
+    background-size: 400% 400%;
+    animation: heroGradientMove 15s ease infinite;
+}
+
+.gradient-text {
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color), var(--primary-color));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    animation: gradientShift 4s ease infinite;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    background-color: var(--secondary-color);
+    color: var(--text-color);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    color: var(--text-color);
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: all 0.3s ease;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 24px;
+    border-radius: 50px;
+    font-weight: 500;
+    cursor: pointer;
+    border: 1px solid transparent;
+}
+
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #333;
+    transform: translateY(-2px);
+}
+
+.btn-outline {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+    background: transparent;
+}
+
+.btn-outline:hover {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+header {
+    padding: 20px 0;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    background: transparent;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    list-style: none;
+}
+
+.nav-links a {
+    font-size: 0.95rem;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.nav-links a:hover {
+    color: var(--primary-color);
+}
+
+.nav-right {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Language Toggle */
+.lang-toggle {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(0, 181, 181, 0.1);
+    padding: 8px 16px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 2px solid var(--primary-color);
+}
+
+.lang-toggle:hover {
+    background: rgba(0, 181, 181, 0.2);
+}
+
+.lang-btn {
+    background: none;
+    border: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 4px 10px;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.lang-btn.active {
+    background: var(--primary-color);
+    color: white;
+}
+
+.hero {
+    padding: 180px 0 80px 0;
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+}
+
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-text h1 {
+    font-size: 4rem;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text h1 span {
+    font-style: italic;
+    font-weight: 400;
+    color: var(--primary-color);
+}
+
+.hero-text p {
+    font-size: 1.1rem;
+    color: var(--light-text);
+    margin-bottom: 30px;
+    max-width: 400px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.features-list {
+    display: flex;
+    gap: 20px;
+    font-size: 0.9rem;
+    color: var(--light-text);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.hero-image {
+    position: relative;
+}
+
+.hero-img-container {
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    position: relative;
+    aspect-ratio: 4/5;
+    transition: box-shadow 0.5s ease;
+    cursor: pointer;
+}
+
+.hero-img-container::before {
+    content: '';
+    position: absolute;
+    top: -5px;
+    left: -5px;
+    right: -5px;
+    bottom: -5px;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color), var(--primary-color));
+    border-radius: calc(var(--border-radius) + 5px);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 0.4s ease;
+    filter: blur(15px);
+}
+
+.hero-img-container::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.6) 0%, rgba(255, 255, 255, 0.4) 50%, rgba(0, 181, 181, 0.2) 100%);
+    z-index: 1;
+    transition: opacity 0.5s ease;
+    border-radius: var(--border-radius);
+}
+
+.hero-img-container:hover::after {
+    opacity: 0;
+}
+
+.hero-img-container:hover::before {
+    opacity: 0.8;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.hero-img-container:hover {
+    box-shadow: 0 0 30px rgba(0, 181, 181, 0.4), 0 0 60px rgba(0, 181, 181, 0.2), 0 0 90px rgba(212, 160, 85, 0.1);
+}
+
+.hero-img-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    filter: saturate(0.8);
+    transition: filter 0.5s ease, transform 0.5s ease;
+}
+
+.hero-img-container:hover img {
+    filter: saturate(1) brightness(1.05);
+    transform: scale(1.05);
+}
+
+.badge {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: blur(5px);
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+    animation: float 3s ease-in-out infinite;
+}
+
+.badge-1 {
+    top: 20%;
+    right: -20px;
+}
+
+.badge-2 {
+    bottom: 15%;
+    left: -30px;
+    animation-delay: 1.5s;
+}
+
+.hero-tagline {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 15px;
+}
+
+.stats-section {
+    padding: 60px 0;
+    background: linear-gradient(135deg, var(--contrast-bg) 0%, #1a1a1a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 16px;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    transition: all 0.4s ease;
+}
+
+.stat-item:hover {
+    background: rgba(255, 255, 255, 0.08);
+    transform: translateY(-5px);
+    border-color: rgba(0, 181, 181, 0.3);
+}
+
+.stat-number {
+    display: block;
+    font-family: var(--font-heading);
+    font-size: 3.5rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.stat-label {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+section {
+    padding: 80px 0;
+}
+
+.section-header {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.section-label {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+}
+
+.services-section {
+    background-color: #f9f9f9;
+}
+
+.service-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+}
+
+.tab-btn {
+    padding: 12px 24px;
+    border: 2px solid var(--primary-color);
+    background: transparent;
+    border-radius: 50px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    color: var(--text-color);
+}
+
+.tab-btn:hover, .tab-btn.active {
+    background-color: var(--primary-color);
+    color: white;
+}
+
+.service-category {
+    margin-bottom: 60px;
+    display: none;
+}
+
+.service-category.active-category {
+    display: block;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    position: relative;
+    border-radius: var(--border-radius);
+    overflow: hidden;
+    height: 400px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-card:hover {
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+.service-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.service-card:hover img {
+    transform: scale(1.05);
+}
+
+.service-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 30px;
+    background: linear-gradient(to top, rgba(0, 0, 0, 0.9), transparent);
+    color: white;
+    text-align: center;
+}
+
+.service-info h3 {
+    color: #fff;
+    margin-bottom: 10px;
+    font-size: 1.4rem;
+}
+
+.mission {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-radius: var(--border-radius);
+    margin: 40px 0;
+    padding: 100px 80px;
+}
+
+.mission-content {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.mission-text h2 {
+    font-size: 2.8rem;
+    margin-bottom: 5px;
+}
+
+.mission-text .subtitle {
+    font-family: var(--font-body);
+    font-weight: 400;
+    color: var(--accent-color);
+    font-size: 1.2rem;
+    margin-bottom: 25px;
+}
+
+.philosophy-quote {
+    font-family: var(--font-heading);
+    font-style: italic;
+    font-size: 1.3rem;
+    color: var(--light-text);
+    border-left: 4px solid var(--accent-color);
+    padding-left: 20px;
+    margin: 25px 0;
+}
+
+.bio-text {
+    color: var(--light-text);
+    line-height: 1.8;
+    margin-bottom: 15px;
+}
+
+.credentials {
+    display: flex;
+    gap: 30px;
+    margin-top: 35px;
+    flex-wrap: wrap;
+}
+
+.credential-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.credential-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-color), #00a896);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.4rem;
+}
+
+.lorena-image {
+    border-radius: 30px;
+    overflow: hidden;
+    box-shadow: 0 25px 60px rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+.lorena-image::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: 20px;
+    bottom: 20px;
+    border: 3px solid var(--accent-color);
+    border-radius: 30px;
+    z-index: -1;
+}
+
+.lorena-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.testimonial {
+    background-color: #f7f5f2;
+}
+
+.testimonial.parallax-section {
+    color: var(--text-color);
+}
+
+.testimonial h2 {
+    color: var(--text-color);
+}
+
+.testimonial-card-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.testimonial-item {
+    background: white;
+    padding: 25px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.08);
+    transition: all 0.4s ease;
+    border-left: 4px solid transparent;
+    position: relative;
+}
+
+.testimonial-item:hover {
+    transform: translateY(-5px) scale(1.02);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+    border-left-color: var(--accent-color);
+}
+
+.testimonial-quote {
+    font-family: var(--font-heading);
+    font-size: 1.1rem;
+    font-style: italic;
+    color: var(--light-text);
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+.testimonial-author strong {
+    color: var(--text-color);
+}
+
+.testimonial-author span {
+    font-size: 0.85rem;
+    color: var(--primary-color);
+}
+
+.stars {
+    color: #d4a055;
+    margin-bottom: 12px;
+    font-size: 1.1rem;
+    display: inline-block;
+    animation: starPulse 2s ease-in-out infinite;
+}
+
+.location-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff 100%);
+}
+
+.location-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.location-header h2 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+.location-content {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 40px;
+    align-items: start;
+}
+
+.map-container {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+}
+
+.location-info {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.address-card {
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.address-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), #00897b);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.address-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.address-details h3 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+}
+
+.direction-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.btn-directions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 16px 24px;
+    border-radius: 12px;
+    font-weight: 600;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.btn-google {
+    background: #4285f4;
+    color: white;
+}
+
+.btn-google:hover {
+    background: #3367d6;
+    transform: translateY(-2px);
+}
+
+.btn-apple {
+    background: #000;
+    color: white;
+}
+
+.btn-apple:hover {
+    background: #333;
+    transform: translateY(-2px);
+}
+
+.btn-waze {
+    background: #33ccff;
+    color: #000;
+}
+
+.btn-waze:hover {
+    background: #00b8e6;
+    transform: translateY(-2px);
+}
+
+footer {
+    background-color: var(--contrast-bg);
+    color: #fff;
+    padding: 80px 0 30px;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr 1.2fr;
+    gap: 50px;
+    margin-bottom: 50px;
+}
+
+.footer-tagline {
+    color: #999;
+    font-size: 0.95rem;
+    margin: 20px 0;
+}
+
+.social-links {
+    display: flex;
+    gap: 15px;
+}
+
+.social-links a {
+    width: 45px;
+    height: 45px;
+    background: rgba(255,255,255,0.1);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    transition: all 0.3s ease;
+}
+
+.social-links a:hover {
+    background: var(--primary-color);
+    transform: translateY(-3px);
+}
+
+footer h4 {
+    color: white;
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+    font-family: var(--font-body);
+}
+
+.contact-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 15px;
+    color: #bbb;
+    font-size: 0.95rem;
+}
+
+.contact-item i {
+    color: var(--primary-color);
+    font-size: 1.1rem;
+}
+
+.hours-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.hours-item {
+    display: flex;
+    justify-content: space-between;
+    color: #bbb;
+    font-size: 0.9rem;
+}
+
+.footer-cta p {
+    color: #999;
+    font-size: 0.95rem;
+    margin-bottom: 20px;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    padding: 14px 28px;
+    border-radius: 50px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.btn-whatsapp:hover {
+    background: #128C7E;
+    transform: translateY(-2px);
+}
+
+.footer-bottom {
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.mobile-menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: var(--text-color);
+    z-index: 1001;
+}
+
+.parallax-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    overflow: hidden;
+}
+
+.parallax-bg {
+    position: absolute;
+    top: -50%;
+    left: 0;
+    width: 100%;
+    height: 200%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: 0;
+}
+
+.parallax-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.parallax-content {
+    position: relative;
+    z-index: 2;
+    padding: 80px 20px;
+}
+
+.parallax-divider-1 {
+    min-height: 450px;
+}
+
+.parallax-divider-1 .parallax-bg {
+    background-image: url('https://images.unsplash.com/photo-1540555700478-4be289fbecef?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+}
+
+.parallax-divider-2 {
+    min-height: auto;
+    padding: 100px 0;
+}
+
+.parallax-divider-2 .parallax-bg {
+    background-image: url('https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=80');
+}
+
+.testimonial-image {
+    border-radius: 24px;
+    overflow: hidden;
+    min-height: 400px;
+}
+
+.testimonial-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.magical-text {
+    background: linear-gradient(90deg, var(--primary-color), var(--accent-color), var(--primary-color));
+    background-size: 200% auto;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: shimmer 3s linear infinite;
+}
+
+.glow {
+    box-shadow: 0 0 40px rgba(0, 181, 181, 0.3);
+}
+
+.reveal {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Language content visibility */
+[data-lang-es] { display: none; }
+[data-lang-en] { display: inline; }
+body.lang-es [data-lang-es] { display: inline; }
+body.lang-es [data-lang-en] { display: none; }
+
+/* Block elements */
+.lang-block[data-lang-es] { display: none; }
+.lang-block[data-lang-en] { display: block; }
+body.lang-es .lang-block[data-lang-es] { display: block; }
+body.lang-es .lang-block[data-lang-en] { display: none; }
+
+/* Flex elements */
+.lang-flex[data-lang-es] { display: none; }
+.lang-flex[data-lang-en] { display: flex; }
+body.lang-es .lang-flex[data-lang-es] { display: flex; }
+body.lang-es .lang-flex[data-lang-en] { display: none; }
+
+@media (max-width: 768px) {
+    /* Container padding */
+    .container {
+        padding: 0 1rem;
+    }
+
+    /* Logo size on mobile */
+    .logo img {
+        height: 80px !important;
+    }
+
+    /* Header adjustments */
+    header {
+        padding: 10px 0;
+    }
+
+    .hero-content, .mission-content, .services-grid, .footer-grid, .location-content {
+        grid-template-columns: 1fr;
+    }
+
+    /* Stats section */
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+    }
+
+    .stat-item {
+        padding: 20px 15px;
+    }
+
+    .stat-number {
+        font-size: 2rem;
+    }
+
+    .stat-label {
+        font-size: 0.8rem;
+    }
+
+    /* Footer */
+    .footer-grid {
+        gap: 40px;
+        text-align: center;
+    }
+
+    footer {
+        padding: 50px 0 20px;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+    }
+
+    .social-links {
+        justify-content: center;
+    }
+
+    .mobile-menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 70%;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 30px;
+        transition: right 0.3s ease;
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-cta {
+        display: none;
+    }
+
+    /* Hero section */
+    .hero {
+        padding: 100px 0 50px 0;
+        min-height: auto;
+    }
+
+    .hero-content {
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text {
+        order: 1;
+    }
+
+    .hero-image {
+        order: 2;
+    }
+
+    .hero-tagline {
+        font-size: 0.75rem;
+        letter-spacing: 1px;
+    }
+
+    .hero-text h1 {
+        font-size: 2rem;
+        line-height: 1.2;
+    }
+
+    .hero-text p {
+        max-width: 100%;
+        margin: 0 auto 25px;
+        font-size: 0.95rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        max-width: 280px;
+        text-align: center;
+        padding: 14px 20px;
+    }
+
+    .features-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 12px;
+    }
+
+    .feature-item {
+        font-size: 0.85rem;
+    }
+
+    .hero-img-container {
+        max-width: 280px;
+        margin: 0 auto;
+        aspect-ratio: 3/4;
+    }
+
+    .badge {
+        display: none;
+    }
+
+    /* Section headings */
+    .section-header h2,
+    .mission-text h2,
+    .location-header h2 {
+        font-size: 1.8rem;
+    }
+
+    .section-label {
+        font-size: 0.75rem;
+    }
+
+    /* Mission section */
+    .mission {
+        padding: 40px 15px;
+        margin: 20px 0;
+        border-radius: 16px;
+    }
+
+    .mission-content {
+        gap: 30px;
+    }
+
+    .mission-text h3.subtitle {
+        font-size: 1rem;
+    }
+
+    .bio-text {
+        font-size: 0.9rem;
+    }
+
+    .lorena-image::before {
+        display: none;
+    }
+
+    .lorena-image {
+        border-radius: 16px;
+    }
+
+    /* Services section */
+    section {
+        padding: 50px 0;
+    }
+
+    .services-section {
+        padding: 50px 0;
+    }
+
+    .service-card {
+        height: 320px;
+    }
+
+    .service-info h3 {
+        font-size: 1.2rem;
+    }
+
+    .service-info p {
+        font-size: 0.85rem;
+    }
+
+    /* Parallax sections */
+    .parallax-divider-1 {
+        min-height: 350px;
+    }
+
+    .parallax-content h2 {
+        font-size: 1.8rem !important;
+    }
+
+    .parallax-content p {
+        font-size: 0.95rem !important;
+    }
+
+    /* Testimonials */
+    .testimonial-quote {
+        font-size: 1rem;
+    }
+
+    .testimonial-grid {
+        gap: 30px;
+    }
+
+    .testimonial-image {
+        min-height: 300px;
+        border-radius: 16px;
+    }
+
+    /* Location */
+    .location-section {
+        padding: 50px 0;
+    }
+
+    .location-header h2 {
+        font-size: 1.8rem;
+        margin-bottom: 10px;
+    }
+
+    .map-container iframe {
+        height: 300px;
+        border-radius: 12px !important;
+    }
+
+    .address-card {
+        padding: 20px;
+        border-radius: 12px;
+    }
+
+    .address-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+    }
+
+    .address-icon i {
+        font-size: 1.5rem;
+    }
+
+    /* Footer bottom */
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 5px;
+        font-size: 0.8rem;
+    }
+
+    /* Service tabs */
+    .service-tabs {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+    }
+
+    .tab-btn {
+        width: 100%;
+        max-width: 220px;
+        padding: 10px 16px;
+        font-size: 0.85rem;
+    }
+
+    /* Language toggle */
+    .lang-toggle {
+        padding: 6px 12px;
+    }
+
+    .lang-btn {
+        font-size: 0.8rem;
+        padding: 3px 8px;
+    }
+
+    /* Credentials */
+    .credentials {
+        flex-direction: column;
+        align-items: center;
+        gap: 20px;
+    }
+
+    .credential-item {
+        width: 100%;
+        max-width: 280px;
+        justify-content: flex-start;
+    }
+
+    .credential-icon {
+        width: 45px;
+        height: 45px;
+        font-size: 1.2rem;
+    }
+
+    /* Direction buttons */
+    .direction-buttons {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .btn-directions {
+        width: 100%;
+        padding: 14px 20px;
+    }
+
+    /* Social links */
+    .social-links {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .social-links a {
+        width: 40px;
+        height: 40px;
+        font-size: 1.1rem;
+    }
+
+    /* Nav right */
+    .nav-right {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    /* Parallax buttons */
+    .parallax-content .btn {
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        margin: 20px auto 0;
+        padding: 14px 20px;
+    }
+
+    /* Mission text centering */
+    .mission-text {
+        text-align: center;
+    }
+
+    .philosophy-quote {
+        border-left: none;
+        border-top: 4px solid var(--accent-color);
+        padding-left: 0;
+        padding-top: 20px;
+        font-size: 1.1rem;
+    }
+
+    /* Testimonial buttons */
+    .testimonial .btn {
+        display: block;
+        width: 100%;
+        max-width: 260px;
+        margin: 20px auto 0;
+    }
+
+    /* Footer CTA */
+    .footer-cta .btn-whatsapp {
+        width: 100%;
+        max-width: 260px;
+        justify-content: center;
+    }
+
+    /* Location section */
+    .location-header {
+        text-align: center;
+    }
+
+    .address-card {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+    }
+
+    /* Hours list */
+    .hours-item {
+        font-size: 0.85rem;
+    }
+
+    /* Contact items */
+    .contact-item {
+        font-size: 0.9rem;
+        justify-content: center;
+    }
+
+    /* Hide cursor glow on mobile */
+    .cursor-glow {
+        display: none;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+    .hero-text h1 {
+        font-size: 1.7rem;
+    }
+
+    .stat-number {
+        font-size: 1.8rem;
+    }
+
+    .stats-grid {
+        gap: 10px;
+    }
+
+    .stat-item {
+        padding: 15px 10px;
+    }
+
+    .section-header h2,
+    .mission-text h2,
+    .location-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .parallax-content h2 {
+        font-size: 1.5rem !important;
+    }
+
+    .service-card {
+        height: 280px;
+    }
+
+    .tab-btn {
+        max-width: 180px;
+        font-size: 0.8rem;
+    }
+}
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <img src="https://storage.googleapis.com/msgsndr/eviVBMfZpB3V1luclRUG/media/6973b0fdb301790f96b9d936.png" alt="Renovarte Lorena" style="height: 150px; object-fit: contain;">
+                </div>
+                <button class="mobile-menu-toggle" aria-label="Toggle menu">
+                    <i class="ri-menu-line"></i>
+                </button>
+                <ul class="nav-links">
+                    <li><a href="#"><span data-lang-en>Home</span><span data-lang-es>Inicio</span></a></li>
+                    <li><a href="#about"><span data-lang-en>About</span><span data-lang-es>Nosotros</span></a></li>
+                    <li><a href="#services"><span data-lang-en>Services</span><span data-lang-es>Servicios</span></a></li>
+                    <li><a href="#location"><span data-lang-en>Location</span><span data-lang-es>Ubicación</span></a></li>
+                    <li><a href="#contact"><span data-lang-en>Contact</span><span data-lang-es>Contacto</span></a></li>
+                </ul>
+                <div class="nav-right">
+                    <div class="lang-toggle">
+                        <button class="lang-btn active" data-lang="en">EN</button>
+                        <button class="lang-btn" data-lang="es">ES</button>
+                    </div>
+                    <a href="#contact" class="btn btn-primary nav-cta">
+                        <span data-lang-en>Get in touch</span><span data-lang-es>Contáctanos</span>
+                    </a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <div class="hero-text">
+                        <p class="hero-tagline">
+                            <span data-lang-en>Colombian Excellence Meets Advanced Technology</span>
+                            <span data-lang-es>Excelencia Colombiana y Tecnología Avanzada</span>
+                        </p>
+                        <h1>
+                            <span data-lang-en>Transform Your </span>
+                            <span data-lang-es>Transforma Tu </span>
+                            <span class="gradient-text">
+                                <span data-lang-en>Natural Beauty</span>
+                                <span data-lang-es>Belleza Natural</span>
+                            </span>
+                        </h1>
+                        <p class="hero-description">
+                            <span data-lang-en>Where 20+ years of expertise meets cutting-edge aesthetic technology. Experience personalized facial and body treatments that reveal the best version of you.</span>
+                            <span data-lang-es>Donde más de 20 años de experiencia se encuentran con tecnología estética de vanguardia. Experimenta tratamientos faciales y corporales personalizados que revelan la mejor versión de ti.</span>
+                        </p>
+
+                        <div class="hero-buttons">
+                            <a href="https://wa.me/18322314173" target="_blank" class="btn btn-primary">
+                                <i class="ri-whatsapp-line"></i>
+                                <span data-lang-en>Book Free Consultation</span>
+                                <span data-lang-es>Consulta Gratis</span>
+                            </a>
+                            <a href="#services" class="btn btn-outline">
+                                <span data-lang-en>View Treatments</span>
+                                <span data-lang-es>Ver Tratamientos</span>
+                            </a>
+                        </div>
+
+                        <div class="features-list">
+                            <div class="feature-item">
+                                <i class="ri-shield-check-line"></i>
+                                <span data-lang-en>Clinically Validated</span>
+                                <span data-lang-es>Clínicamente Validado</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="ri-award-line"></i>
+                                <span data-lang-en>20+ Years Expert</span>
+                                <span data-lang-es>20+ Años Experiencia</span>
+                            </div>
+                            <div class="feature-item">
+                                <i class="ri-heart-pulse-line"></i>
+                                <span data-lang-en>Personalized Care</span>
+                                <span data-lang-es>Cuidado Personalizado</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="hero-image">
+                        <div class="hero-img-container">
+                            <img src="https://storage.googleapis.com/msgsndr/eviVBMfZpB3V1luclRUG/media/6972fd07eb392b256abf6780.webp" alt="Professional facial treatment at Renovarte">
+                        </div>
+                        <div class="badge badge-1">
+                            <span data-lang-en>HIFU Technology</span>
+                            <span data-lang-es>Tecnología HIFU</span>
+                        </div>
+                        <div class="badge badge-2">
+                            <span data-lang-en>Organic Products</span>
+                            <span data-lang-es>Productos Orgánicos</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label">
+                            <span data-lang-en>Years Experience</span>
+                            <span data-lang-es>Años de Experiencia</span>
+                        </span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">5,000+</span>
+                        <span class="stat-label">
+                            <span data-lang-en>Happy Clients</span>
+                            <span data-lang-es>Clientes Felices</span>
+                        </span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">50+</span>
+                        <span class="stat-label">
+                            <span data-lang-en>Treatments</span>
+                            <span data-lang-es>Tratamientos</span>
+                        </span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100+</span>
+                        <span class="stat-label">
+                            <span data-lang-en>5-Star Reviews</span>
+                            <span data-lang-es>Reseñas 5 Estrellas</span>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mission" id="about">
+            <div class="container">
+                <div class="mission-content">
+                    <div class="mission-img">
+                        <div class="lorena-image">
+                            <img src="https://renovartelv.com/wp-content/uploads/2024/09/lorena.webp" alt="Lorena Villafañe - Aesthetic Specialist">
+                        </div>
+                    </div>
+                    <div class="mission-text">
+                        <p class="section-label">
+                            <span data-lang-en>Meet Your Specialist</span>
+                            <span data-lang-es>Conoce a Tu Especialista</span>
+                        </p>
+                        <h2>Lorena Villafañe</h2>
+                        <h3 class="subtitle">
+                            <span data-lang-en>Advanced Aesthetics Expert</span>
+                            <span data-lang-es>Experta en Estética Avanzada</span>
+                        </h3>
+
+                        <blockquote class="philosophy-quote">
+                            "La estética es un arte que transforma y resalta lo mejor de tu propia naturaleza."
+                        </blockquote>
+
+                        <p class="bio-text">
+                            <span data-lang-en>With <strong>over 20 years dedicated to the art of beauty</strong>, Lorena brings the renowned Colombian tradition of aesthetic excellence to Houston.</span>
+                            <span data-lang-es>Con <strong>más de 20 años dedicados al arte de la belleza</strong>, Lorena trae la reconocida tradición colombiana de excelencia estética a Houston.</span>
+                        </p>
+
+                        <p class="bio-text">
+                            <span data-lang-en>Her philosophy is simple: <em>enhance your natural beauty, never mask it</em>.</span>
+                            <span data-lang-es>Su filosofía es simple: <em>realzar tu belleza natural, nunca enmascararla</em>.</span>
+                        </p>
+
+                        <div class="credentials">
+                            <div class="credential-item">
+                                <div class="credential-icon"><i class="ri-medal-line"></i></div>
+                                <div>
+                                    <strong>20+ <span data-lang-en>Years</span><span data-lang-es>Años</span></strong>
+                                    <span><span data-lang-en>Clinical Experience</span><span data-lang-es>Experiencia Clínica</span></span>
+                                </div>
+                            </div>
+                            <div class="credential-item">
+                                <div class="credential-icon"><i class="ri-verified-badge-line"></i></div>
+                                <div>
+                                    <strong><span data-lang-en>Certified</span><span data-lang-es>Certificada</span></strong>
+                                    <span><span data-lang-en>Advanced Techniques</span><span data-lang-es>Técnicas Avanzadas</span></span>
+                                </div>
+                            </div>
+                            <div class="credential-item">
+                                <div class="credential-icon"><i class="ri-leaf-line"></i></div>
+                                <div>
+                                    <strong><span data-lang-en>Organic</span><span data-lang-es>Orgánico</span></strong>
+                                    <span><span data-lang-en>Cruelty-Free Products</span><span data-lang-es>Productos Libres de Crueldad</span></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="services" class="services-section">
+            <div class="container">
+                <div class="section-header">
+                    <p class="section-label">
+                        <span data-lang-en>Treatments & Services</span>
+                        <span data-lang-es>Tratamientos y Servicios</span>
+                    </p>
+                    <h2>
+                        <span data-lang-en>Advanced Aesthetic Solutions</span>
+                        <span data-lang-es>Soluciones Estéticas Avanzadas</span>
+                    </h2>
+                    <p class="section-subtitle">
+                        <span data-lang-en>Every treatment is tailored to your unique skin type and goals.</span>
+                        <span data-lang-es>Cada tratamiento está personalizado a tu tipo de piel y objetivos únicos.</span>
+                    </p>
+                </div>
+
+                <div class="service-tabs">
+                    <button class="tab-btn active" data-target="anti-acne"><span data-lang-en>Anti-Acne</span><span data-lang-es>Anti-Acné</span></button>
+                    <button class="tab-btn" data-target="face-care"><span data-lang-en>Face Care</span><span data-lang-es>Consiente Tu Rostro</span></button>
+                    <button class="tab-btn" data-target="anti-aging"><span data-lang-en>Anti-Aging</span><span data-lang-es>Anti-Edad</span></button>
+                    <button class="tab-btn" data-target="depigmentation"><span data-lang-en>Depigmentation</span><span data-lang-es>Despigmentantes</span></button>
+                    <button class="tab-btn" data-target="body"><span data-lang-en>Body</span><span data-lang-es>Corporales</span></button>
+                    <button class="tab-btn" data-target="toning"><span data-lang-en>Toning</span><span data-lang-es>Tonificación</span></button>
+                    <button class="tab-btn" data-target="micropigmentation"><span data-lang-en>Micropigmentation</span><span data-lang-es>Micropigmentación</span></button>
+                    <button class="tab-btn" data-target="facial-treatments"><span data-lang-en>Facial Treatments</span><span data-lang-es>Tratamientos Faciales</span></button>
+                </div>
+
+                <!-- Anti-Acne (7 services) -->
+                <div class="service-category active-category" id="anti-acne">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2025/01/anti-acne.webp" alt="Deep Facial">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Deep Facial</span><span data-lang-es>Facial Profundo</span></h3>
+                                <p><span data-lang-en>Deep cleansing and intense skin revitalization.</span><span data-lang-es>Renueva tu piel con limpieza profunda y revitalización intensa.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1512290923902-8a9281329d3e?w=400" alt="Focused Facial">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Focused Facial</span><span data-lang-es>Facial Focalizado</span></h3>
+                                <p><span data-lang-en>Specific treatment to improve key facial areas.</span><span data-lang-es>Tratamiento específico para mejorar áreas clave del rostro.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400" alt="Depigmenting Protocol">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Depigmenting Protocol</span><span data-lang-es>Protocolo Despigmentante</span></h3>
+                                <p><span data-lang-en>Reduce spots and unify your skin tone.</span><span data-lang-es>Reduce manchas y unifica el tono de tu piel.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400" alt="Hollywood Peel">
+                            <div class="service-info">
+                                <h3>Hollywood Peel</h3>
+                                <p><span data-lang-en>Illuminate your face with a gentle rejuvenating peel.</span><span data-lang-es>Ilumina tu rostro con un peeling suave y rejuvenecedor.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=400" alt="Oxygeneo">
+                            <div class="service-info">
+                                <h3>Oxygeneo</h3>
+                                <p><span data-lang-en>Oxygenate, hydrate and revitalize skin in one session.</span><span data-lang-es>Oxigena, hidrata y revitaliza la piel en una sola sesión.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=400" alt="Fractional RF">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Fractional Radio Frequency</span><span data-lang-es>Radio Frecuencia Fraccionada</span></h3>
+                                <p><span data-lang-en>Tighten and rejuvenate your skin with advanced technology.</span><span data-lang-es>Reafirma y rejuvenece tu piel con tecnología avanzada.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1540555700478-4be289fbec6c?w=400" alt="Ozone Therapy">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Ozone Therapy</span><span data-lang-es>Ozonoterapia</span></h3>
+                                <p><span data-lang-en>Purify, detoxify and revitalize with ozone therapy.</span><span data-lang-es>Purifica, desintoxica y revitaliza con terapia de ozono.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Face Care (4 services) -->
+                <div class="service-category" id="face-care">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2025/01/3.webp" alt="Porcelain Facial">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Porcelain Facial</span><span data-lang-es>Porcelanización Facial</span></h3>
+                                <p><span data-lang-en>Achieve a porcelain skin effect, smooth and luminous.</span><span data-lang-es>Logra un efecto piel de porcelana, suave y luminosa.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Fibroblast">
+                            <div class="service-info">
+                                <h3>Fibroblast</h3>
+                                <p><span data-lang-en>Tighten and rejuvenate your skin without surgery.</span><span data-lang-es>Tensa y rejuvenece tu piel sin cirugía.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2024/10/papada.webp" alt="Double Chin Elimination">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Double Chin Elimination</span><span data-lang-es>Eliminación de Papada</span></h3>
+                                <p><span data-lang-en>Redefine your profile with this non-invasive treatment.</span><span data-lang-es>Redefine tu perfil con este tratamiento no invasivo.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=400" alt="Focused Facial RF">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Focused Facial RF</span><span data-lang-es>Radio Frecuencia Facial Focalizada</span></h3>
+                                <p><span data-lang-en>Tighten and revitalize specific facial areas.</span><span data-lang-es>Reafirma y revitaliza áreas específicas del rostro.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Anti-Aging (4 services) -->
+                <div class="service-category" id="anti-aging">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2025/01/8.webp" alt="Hifu Frozen">
+                            <div class="service-info">
+                                <h3>Hifu Frozen</h3>
+                                <p><span data-lang-en>Lift and firm with a rejuvenating cold effect.</span><span data-lang-es>Levanta y reafirma con un efecto frío rejuvenecedor.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400" alt="Hifu 7D">
+                            <div class="service-info">
+                                <h3>Hifu 7D Ulteraphy</h3>
+                                <p><span data-lang-en>Visible lifting and facial firmness results.</span><span data-lang-es>Resultados visibles en lifting y firmeza facial.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400" alt="Stem Cells">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Stem Cells</span><span data-lang-es>Células Madre</span></h3>
+                                <p><span data-lang-en>Regenerate your skin with the power of your own cells.</span><span data-lang-es>Regenera tu piel con el poder de tus propias células.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1573461160327-b450ce3d8e7f?w=400" alt="Exosomes">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Exosomes</span><span data-lang-es>Exosomas</span></h3>
+                                <p><span data-lang-en>Deep repair and revitalization for a youthful face.</span><span data-lang-es>Repara y revitaliza profundamente para un rostro joven.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depigmentation (2 services) -->
+                <div class="service-category" id="depigmentation">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2025/01/5.webp" alt="Underarm Depigmentation">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Underarm Depigmentation</span><span data-lang-es>Despigmentación en Axilas</span></h3>
+                                <p><span data-lang-en>Recover the natural tone of your underarms.</span><span data-lang-es>Recupera el tono natural de tus axilas.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1556760544-74068565f05c?w=400" alt="Intimate Depigmentation">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Intimate Depigmentation</span><span data-lang-es>Despigmentación Íntima</span></h3>
+                                <p><span data-lang-en>Leave behind dark pigmentation with our intimate treatment.</span><span data-lang-es>Deja atrás la pigmentación oscura con nuestro tratamiento íntimo.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Body (5 services) -->
+                <div class="service-category" id="body">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2025/01/7.webp" alt="Cellulite Elimination">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Cellulite Elimination</span><span data-lang-es>Eliminación de Celulitis</span></h3>
+                                <p><span data-lang-en>Reduce cellulite, improve skin and define your figure.</span><span data-lang-es>Reduce la celulitis, mejora la piel y define tu figura.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1600334089648-b0d9d3028eb2?w=400" alt="Wood Therapy">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Wood Therapy</span><span data-lang-es>Maderoterapia</span></h3>
+                                <p><span data-lang-en>Shape your body, reduce cellulite and activate circulation.</span><span data-lang-es>Moldea tu cuerpo, reduce celulitis y activa la circulación.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2024/10/cintura.webp" alt="Liposonix">
+                            <div class="service-info">
+                                <h3>Liposonix</h3>
+                                <p><span data-lang-en>Reduce localized fat without surgery in one session.</span><span data-lang-es>Reduce grasa localizada sin cirugía en una sola sesión.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=400" alt="Cavitation">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Cavitation</span><span data-lang-es>Cavitación</span></h3>
+                                <p><span data-lang-en>Break down localized fat and shape your figure.</span><span data-lang-es>Rompe la grasa localizada y moldea tu figura.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=400" alt="Laser Hair Removal">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Laser Hair Removal</span><span data-lang-es>Depilación Láser</span></h3>
+                                <p><span data-lang-en>Permanent, fast and safe hair removal.</span><span data-lang-es>Elimina el vello de forma permanente, rápida y segura.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Toning (3 services) -->
+                <div class="service-category" id="toning">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2025/01/1.webp" alt="Glute Toning">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Glute Toning</span><span data-lang-es>Tonificación de Glúteos</span></h3>
+                                <p><span data-lang-en>Achieve firm and sculpted glutes effortlessly.</span><span data-lang-es>Logra glúteos firmes y moldeados sin esfuerzo.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1574680096145-d05b474e2155?w=400" alt="Diode Lipolysis">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Diode Lipolysis</span><span data-lang-es>Lipólisis de Diodo</span></h3>
+                                <p><span data-lang-en>Shape your body by eliminating localized fat.</span><span data-lang-es>Moldea tu cuerpo eliminando grasa localizada.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1583454110551-21f2fa2afe61?w=400" alt="Pressotherapy">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Pressotherapy</span><span data-lang-es>Presoterapia</span></h3>
+                                <p><span data-lang-en>Stimulate circulation and reduce fluid retention.</span><span data-lang-es>Estimula la circulación y reduce la retención de líquidos.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Micropigmentation (3 services) -->
+                <div class="service-category" id="micropigmentation">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2024/10/cejas.webp" alt="Microblading">
+                            <div class="service-info">
+                                <h3>Microblading</h3>
+                                <p><span data-lang-en>Perfect eyebrow design, hair by hair with realistic finish.</span><span data-lang-es>Diseño de cejas perfectas pelo a pelo con acabado realista.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://renovartelv.com/wp-content/uploads/2025/01/2.webp" alt="Lip Neutralization">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Lip Neutralization</span><span data-lang-es>Neutralización de Labios</span></h3>
+                                <p><span data-lang-en>Correct dark tones and achieve natural-looking lips.</span><span data-lang-es>Corrige tonos oscuros y logra labios de aspecto natural.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1583001931096-959e9a1a6223?w=400" alt="Eye Liner">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Eye Liner</span><span data-lang-es>Línea de Ojos</span></h3>
+                                <p><span data-lang-en>Highlight your gaze with a precise, long-lasting line.</span><span data-lang-es>Destaca tu mirada con una línea precisa y de larga duración.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Facial Treatments (12 services) -->
+                <div class="service-category" id="facial-treatments">
+                    <div class="services-grid">
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400" alt="Facial Profundo">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Deep Facial</span><span data-lang-es>Facial Profundo</span></h3>
+                                <p><span data-lang-en>Professional treatment that cleanses, exfoliates, nourishes and purifies skin deeply.</span><span data-lang-es>Tratamiento profesional que limpia, exfolia, nutre y purifica la piel en profundidad.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1512290923902-8a9281329d3e?w=400" alt="Porcelanización Facial">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Porcelain Facial</span><span data-lang-es>Porcelanización Facial</span></h3>
+                                <p><span data-lang-en>Achieve flawless, luminous, porcelain-like skin with advanced techniques.</span><span data-lang-es>Logra una piel impecable, luminosa y tersa como la porcelana.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?w=400" alt="Carboxiterapia">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Needle-Free Carboxytherapy</span><span data-lang-es>Carboxiterapia Facial Sin Agujas</span></h3>
+                                <p><span data-lang-en>Non-invasive CO2 treatment to revitalize skin and combat aging signs.</span><span data-lang-es>Tratamiento no invasivo con CO2 para revitalizar la piel y combatir signos de envejecimiento.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=400" alt="Hollywood Peel">
+                            <div class="service-info">
+                                <h3>Hollywood Peel</h3>
+                                <p><span data-lang-en>Carbon peel with laser for instant glow and deep cleansing.</span><span data-lang-es>Peeling de carbón con láser para luminosidad instantánea y limpieza profunda.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1552693673-1bf958298935?w=400" alt="OxyGeneo">
+                            <div class="service-info">
+                                <h3>Facial OxyGeneo</h3>
+                                <p><span data-lang-en>3-in-1 treatment: exfoliate, oxygenate and nourish for radiant skin.</span><span data-lang-es>Tratamiento 3 en 1: exfolia, oxigena y nutre para una piel radiante.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400" alt="HIFU 7D">
+                            <div class="service-info">
+                                <h3>HIFU 7D</h3>
+                                <p><span data-lang-en>7th generation ultrasound for immediate lifting effect without surgery.</span><span data-lang-es>Ultrasonido de séptima generación para efecto lifting inmediato sin cirugía.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=400" alt="HIFU Frozen">
+                            <div class="service-info">
+                                <h3>HIFU Frozen</h3>
+                                <p><span data-lang-en>Advanced microlifting with cooling technology for comfort and safety.</span><span data-lang-es>Microlifting avanzado con tecnología de enfriamiento para comodidad y seguridad.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1519415510236-718bdfcd89c8?w=400" alt="Radiofrecuencia Fraccional">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Fractional Radiofrequency</span><span data-lang-es>Radiofrecuencia Fraccional</span></h3>
+                                <p><span data-lang-en>Microneedling with RF to regenerate collagen and improve texture.</span><span data-lang-es>Microagujas con RF para regenerar colágeno y mejorar la textura.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400" alt="Fibroblast">
+                            <div class="service-info">
+                                <h3>Fibroblast Facial</h3>
+                                <p><span data-lang-en>Plasma pen treatment for lifting and tightening without surgery.</span><span data-lang-es>Tratamiento con plasma pen para lifting y tensado sin cirugía.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400" alt="Peeling Químico">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Chemical Peel</span><span data-lang-es>Peeling Químico</span></h3>
+                                <p><span data-lang-en>Acid solution to exfoliate and reveal younger, smoother skin.</span><span data-lang-es>Solución ácida para exfoliar y revelar una piel más joven y suave.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1573461160327-b450ce3d8e7f?w=400" alt="PDRN Salmon">
+                            <div class="service-info">
+                                <h3>PDRN del Salmon</h3>
+                                <p><span data-lang-en>Salmon DNA treatment for deep hydration and skin regeneration.</span><span data-lang-es>Tratamiento con ADN de salmón para hidratación profunda y regeneración.</span></p>
+                            </div>
+                        </div>
+                        <div class="service-card">
+                            <img src="https://images.unsplash.com/photo-1560750588-73207b1ef5b8?w=400" alt="Exosomas">
+                            <div class="service-info">
+                                <h3><span data-lang-en>Exosomes</span><span data-lang-es>Exosomas</span></h3>
+                                <p><span data-lang-en>Cellular messengers for deep regeneration and rejuvenation.</span><span data-lang-es>Mensajeros celulares para regeneración y rejuvenecimiento profundo.</span></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="parallax-section parallax-divider-1">
+            <div class="parallax-bg"></div>
+            <div class="parallax-overlay"></div>
+            <div class="parallax-content">
+                <p style="font-size: 0.9rem; letter-spacing: 3px; text-transform: uppercase; margin-bottom: 15px;">
+                    <span data-lang-en>The Renovarte Promise</span>
+                    <span data-lang-es>La Promesa Renovarte</span>
+                </p>
+                <h2 style="font-size: 3rem; margin-bottom: 15px; color: white;">
+                    <span data-lang-en>Your </span><span data-lang-es>Tu </span>
+                    <span class="magical-text"><span data-lang-en>Transformation</span><span data-lang-es>Transformación</span></span>
+                    <span data-lang-en> Awaits</span><span data-lang-es> Te Espera</span>
+                </h2>
+                <p style="font-size: 1.15rem; max-width: 650px; margin: 0 auto;">
+                    <span data-lang-en>Experience the perfect blend of Colombian aesthetic tradition and cutting-edge technology.</span>
+                    <span data-lang-es>Experimenta la mezcla perfecta de la tradición estética colombiana y tecnología de vanguardia.</span>
+                </p>
+                <a href="https://wa.me/18322314173" target="_blank" class="btn btn-primary glow" style="margin-top: 35px; background-color: white; color: #222;">
+                    <i class="ri-calendar-check-line"></i>
+                    <span data-lang-en>Schedule Your Visit</span>
+                    <span data-lang-es>Agenda Tu Visita</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="testimonial parallax-section parallax-divider-2" id="proof">
+            <div class="parallax-bg"></div>
+            <div class="parallax-overlay" style="background: rgba(255, 255, 255, 0.94);"></div>
+            <div class="container" style="position: relative; z-index: 2;">
+                <div class="mission-content testimonial-grid">
+                    <div>
+                        <p class="section-label">
+                            <span data-lang-en>Client Stories</span>
+                            <span data-lang-es>Historias de Clientes</span>
+                        </p>
+                        <h2>
+                            <span data-lang-en>Real Results, </span><span data-lang-es>Resultados Reales, </span>
+                            <span class="magical-text"><span data-lang-en>Real Confidence</span><span data-lang-es>Confianza Real</span></span>
+                        </h2>
+
+                        <div class="testimonial-card-wrapper">
+                            <div class="testimonial-item">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-quote">"Lore es una profesional increíble, ética y empática con sus pacientes. Tengo 3 años cuidando mi cara con ella y los resultados son increíbles!"</p>
+                                <div class="testimonial-author">
+                                    <strong>María G.</strong>
+                                    <span>3 <span data-lang-en>Years with Renovarte</span><span data-lang-es>Años con Renovarte</span></span>
+                                </div>
+                            </div>
+
+                            <div class="testimonial-item">
+                                <div class="stars">★★★★★</div>
+                                <p class="testimonial-quote">
+                                    <span data-lang-en>"The best investment in myself. Lorena's expertise and the advanced technology she uses gave me results I never thought possible."</span>
+                                    <span data-lang-es>"La mejor inversión en mí misma. La experiencia de Lorena y la tecnología avanzada que usa me dieron resultados que nunca pensé posibles."</span>
+                                </p>
+                                <div class="testimonial-author">
+                                    <strong>Jennifer L.</strong>
+                                    <span>Houston, TX</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="https://wa.me/18322314173" target="_blank" class="btn btn-primary glow" style="margin-top: 30px;">
+                            <i class="ri-whatsapp-line"></i>
+                            <span data-lang-en>Start Your Transformation</span>
+                            <span data-lang-es>Comienza Tu Transformación</span>
+                        </a>
+                    </div>
+                    <div class="testimonial-image">
+                        <img src="https://renovartelv.com/wp-content/uploads/2024/10/RenovarteLv1.webp" alt="Satisfied clients at Renovarte">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="location-section" id="location">
+            <div class="container">
+                <div class="location-header">
+                    <h2><span data-lang-en>Find Us</span><span data-lang-es>Encuéntranos</span></h2>
+                    <p>
+                        <span data-lang-en>Located in the heart of Houston, easily accessible from anywhere in the city</span>
+                        <span data-lang-es>Ubicados en el corazón de Houston, fácilmente accesible desde cualquier parte de la ciudad</span>
+                    </p>
+                </div>
+                <div class="location-content">
+                    <div class="map-container">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3464.892!2d-95.4922!3d29.7024!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8640c3c3e7c7c7c7%3A0x0!2s6633+Hillcroft+St+%23265%2C+Houston%2C+TX+77081!5e0!3m2!1sen!2sus!4v1706000000000" width="100%" height="400" style="border:0; border-radius: 16px;" allowfullscreen="" loading="lazy"></iframe>
+                    </div>
+                    <div class="location-info">
+                        <div class="address-card">
+                            <div class="address-icon">
+                                <i class="ri-map-pin-2-fill"></i>
+                            </div>
+                            <div class="address-details">
+                                <h3>Renovarte Lorena</h3>
+                                <p>6633 Hillcroft St, Suite #265</p>
+                                <p>Houston, TX 77081</p>
+                            </div>
+                        </div>
+                        <div class="direction-buttons">
+                            <a href="https://www.google.com/maps/dir/?api=1&destination=6633+Hillcroft+St+Suite+265+Houston+TX+77081" target="_blank" class="btn btn-directions btn-google">
+                                <i class="ri-google-fill"></i> Google Maps
+                            </a>
+                            <a href="https://maps.apple.com/?daddr=6633+Hillcroft+St+Suite+265+Houston+TX+77081" target="_blank" class="btn btn-directions btn-apple">
+                                <i class="ri-apple-fill"></i> Apple Maps
+                            </a>
+                            <a href="https://waze.com/ul?ll=29.7024,-95.4922&navigate=yes" target="_blank" class="btn btn-directions btn-waze">
+                                <i class="ri-navigation-fill"></i> Waze
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer id="contact">
+            <div class="container">
+                <div class="footer-grid">
+                    <div class="footer-main">
+                        <div class="logo">
+                            <img src="https://storage.googleapis.com/msgsndr/eviVBMfZpB3V1luclRUG/media/6973b0fdb301790f96b9d936.png" alt="Renovarte Lorena" style="height: 150px; object-fit: contain;">
+                        </div>
+                        <p class="footer-tagline">
+                            <span data-lang-en>Colombian Excellence. Advanced Technology. Your Natural Beauty.</span>
+                            <span data-lang-es>Excelencia Colombiana. Tecnología Avanzada. Tu Belleza Natural.</span>
+                        </p>
+                        <div class="social-links">
+                            <a href="https://instagram.com/renovartelv" target="_blank"><i class="ri-instagram-line"></i></a>
+                            <a href="https://wa.me/18322314173" target="_blank"><i class="ri-whatsapp-line"></i></a>
+                            <a href="https://facebook.com/renovartelv" target="_blank"><i class="ri-facebook-line"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="footer-contact">
+                        <h4><span data-lang-en>Visit Us</span><span data-lang-es>Visítanos</span></h4>
+                        <div class="contact-item">
+                            <i class="ri-map-pin-2-line"></i>
+                            <div>
+                                <p>6633 Hillcroft Suite #265</p>
+                                <p>Houston, TX 77081</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <i class="ri-phone-line"></i>
+                            <p>+1 (832) 231-4173</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="ri-instagram-line"></i>
+                            <p>@renovartelv</p>
+                        </div>
+                    </div>
+
+                    <div class="footer-hours">
+                        <h4><span data-lang-en>Hours</span><span data-lang-es>Horario</span></h4>
+                        <div class="hours-list">
+                            <div class="hours-item">
+                                <span><span data-lang-en>Tue - Fri</span><span data-lang-es>Mar - Vie</span></span>
+                                <span>10AM - 5PM</span>
+                            </div>
+                            <div class="hours-item">
+                                <span><span data-lang-en>Saturday</span><span data-lang-es>Sábado</span></span>
+                                <span>10AM - 3PM</span>
+                            </div>
+                            <div class="hours-item closed">
+                                <span><span data-lang-en>Sun & Mon</span><span data-lang-es>Dom y Lun</span></span>
+                                <span><span data-lang-en>Closed</span><span data-lang-es>Cerrado</span></span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-cta">
+                        <h4><span data-lang-en>Ready to Transform?</span><span data-lang-es>¿Lista para Transformarte?</span></h4>
+                        <p><span data-lang-en>Book your free consultation today.</span><span data-lang-es>Agenda tu consulta gratis hoy.</span></p>
+                        <a href="https://wa.me/18322314173" target="_blank" class="btn btn-whatsapp">
+                            <i class="ri-whatsapp-line"></i>
+                            <span data-lang-en>Chat on WhatsApp</span>
+                            <span data-lang-es>Chatea por WhatsApp</span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <p>© 2026 Renovarte LV. <span data-lang-en>All rights reserved.</span><span data-lang-es>Todos los derechos reservados.</span></p>
+                    <p><span data-lang-en>Aesthetic & Wellness Med Spa</span><span data-lang-es>Centro de Estética y Bienestar</span> · Houston, Texas</p>
+                </div>
+            </div>
+        </footer>
+    </main>
+
+    <script>
+document.addEventListener('DOMContentLoaded', () => {
+    // ========== CURSOR GLOW EFFECT ==========
+    const cursorGlow = document.createElement('div');
+    cursorGlow.className = 'cursor-glow';
+    document.body.appendChild(cursorGlow);
+
+    let cursorX = 0, cursorY = 0;
+    let glowX = 0, glowY = 0;
+
+    document.addEventListener('mousemove', (e) => {
+        cursorX = e.clientX;
+        cursorY = e.clientY;
+    });
+
+    function updateCursorGlow() {
+        const speed = 0.08;
+        glowX += (cursorX - glowX) * speed;
+        glowY += (cursorY - glowY) * speed;
+        cursorGlow.style.left = glowX + 'px';
+        cursorGlow.style.top = glowY + 'px';
+        requestAnimationFrame(updateCursorGlow);
+    }
+    updateCursorGlow();
+
+    // ========== END CURSOR GLOW ==========
+
+    // Language Toggle
+    const langBtns = document.querySelectorAll('.lang-btn');
+
+    langBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            langBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (lang === 'es') {
+                document.body.classList.add('lang-es');
+            } else {
+                document.body.classList.remove('lang-es');
+            }
+            localStorage.setItem('preferredLang', lang);
+        });
+    });
+
+    const savedLang = localStorage.getItem('preferredLang');
+    if (savedLang === 'es') {
+        document.body.classList.add('lang-es');
+        langBtns.forEach(btn => {
+            btn.classList.toggle('active', btn.getAttribute('data-lang') === 'es');
+        });
+    }
+
+    // Mobile Menu Toggle
+    const mobileMenuToggle = document.querySelector('.mobile-menu-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (mobileMenuToggle) {
+        mobileMenuToggle.addEventListener('click', () => {
+            navLinks.classList.toggle('active');
+            const icon = mobileMenuToggle.querySelector('i');
+            if (navLinks.classList.contains('active')) {
+                icon.classList.remove('ri-menu-line');
+                icon.classList.add('ri-close-line');
+            } else {
+                icon.classList.remove('ri-close-line');
+                icon.classList.add('ri-menu-line');
+            }
+        });
+
+        navLinks.querySelectorAll('a').forEach(link => {
+            link.addEventListener('click', () => {
+                navLinks.classList.remove('active');
+                const icon = mobileMenuToggle.querySelector('i');
+                icon.classList.remove('ri-close-line');
+                icon.classList.add('ri-menu-line');
+            });
+        });
+    }
+
+    // Service Tabs
+    const tabButtons = document.querySelectorAll('.tab-btn');
+    const serviceCategories = document.querySelectorAll('.service-category');
+
+    tabButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            tabButtons.forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            serviceCategories.forEach(category => category.classList.remove('active-category'));
+            const targetId = button.getAttribute('data-target');
+            const targetCategory = document.getElementById(targetId);
+            if (targetCategory) targetCategory.classList.add('active-category');
+        });
+    });
+
+    // Smooth Scroll
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) target.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
+
+    // Reveal animations
+    const revealElements = document.querySelectorAll('section, .service-card');
+    revealElements.forEach(el => el.classList.add('reveal'));
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('active');
+                observer.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.15 });
+
+    revealElements.forEach(el => observer.observe(el));
+});
+    </script>
+</body>
+</html>
