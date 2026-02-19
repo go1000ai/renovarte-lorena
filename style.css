@@ -1921,3 +1921,103 @@ footer h4 {
     opacity: 1;
     transform: scale(1);
 }
+
+/* Video Showcase Section */
+.video-showcase {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a2e 50%, #0a0a0a 100%);
+    position: relative;
+    overflow: hidden;
+}
+
+.video-showcase::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(ellipse at center, rgba(0, 181, 181, 0.08) 0%, transparent 60%);
+    animation: videoGlow 8s ease-in-out infinite;
+}
+
+@keyframes videoGlow {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    33% { transform: translate(10%, -5%) scale(1.1); }
+    66% { transform: translate(-5%, 10%) scale(0.95); }
+}
+
+.video-showcase .section-header {
+    position: relative;
+    z-index: 2;
+}
+
+.video-showcase .section-header h2 {
+    color: white;
+}
+
+.video-showcase .section-label {
+    color: var(--accent-color);
+}
+
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    position: relative;
+    z-index: 2;
+}
+
+.video-card {
+    position: relative;
+    border-radius: 20px;
+    overflow: hidden;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    transition: all 0.5s ease;
+}
+
+.video-card:hover {
+    transform: translateY(-8px);
+    border-color: rgba(0, 181, 181, 0.3);
+    box-shadow: 0 20px 60px rgba(0, 181, 181, 0.2);
+}
+
+.video-card video {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 20px 20px 0 0;
+}
+
+.video-card-info {
+    padding: 25px 30px;
+    color: white;
+}
+
+.video-card-info h3 {
+    color: white;
+    font-size: 1.3rem;
+    margin-bottom: 8px;
+}
+
+.video-card-info p {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.95rem;
+    line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .video-card video {
+        height: 250px;
+    }
+
+    .video-showcase {
+        padding: 60px 0;
+    }
+}
