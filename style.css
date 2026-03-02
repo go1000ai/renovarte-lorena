@@ -1943,6 +1943,68 @@ footer h4 {
     box-shadow: 0 2px 10px rgba(212, 160, 85, 0.3);
 }
 
+/* Laser Zone-Based Pricing */
+.laser-zones-grid {
+    grid-template-columns: repeat(3, 1fr) !important;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.laser-zone-card .service-info {
+    text-align: center;
+}
+
+.zone-pricing {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+    margin-bottom: 10px;
+}
+
+.zone-price {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--primary-color), #00a896);
+    color: white;
+    padding: 8px 20px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 1.3rem;
+    letter-spacing: 0.5px;
+    box-shadow: 0 2px 10px rgba(0, 181, 181, 0.3);
+}
+
+.zone-price small {
+    font-size: 0.65em;
+    font-weight: 500;
+    opacity: 0.9;
+}
+
+.zone-package {
+    display: inline-block;
+    background: linear-gradient(135deg, var(--accent-color), #c4904a);
+    color: white;
+    padding: 4px 14px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 8px rgba(212, 160, 85, 0.25);
+}
+
+@media (max-width: 768px) {
+    .laser-zones-grid {
+        grid-template-columns: 1fr !important;
+        max-width: 400px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .laser-zones-grid {
+        grid-template-columns: repeat(3, 1fr) !important;
+        max-width: 100%;
+    }
+}
+
 /* Video Showcase Section */
 .video-showcase {
     padding: 100px 0;
